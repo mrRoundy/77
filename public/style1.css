@@ -1,0 +1,119 @@
+body {
+    padding-top: 80px;
+}
+
+/* Custom styles for the navigation bar */
+.custom-nav {
+    background-color: #173F25;
+    color: white;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    font-family: 'Inter Light', serif;
+    padding: 0 3rem;
+}
+
+/* Custom style for the logo to control its size */
+.nav-logo img {
+    /* Change these values to whatever size you need! */
+    height: 6rem; /* 80px */
+    width: 6rem;  /* 80px */
+}
+
+.nav-logo {
+    position: absolute;
+    left: 51%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Add this to your style.css file */
+
+/* This styles the container link (the <a> tag) */
+.custom-feedback-logo {
+  /* This is the equivalent of Tailwind's 'flex-shrink-0' */
+  flex-shrink: 0;
+}
+
+/* This styles the image inside the link */
+.custom-feedback-logo img {
+  /* This sets a specific height, replacing the invalid 'h-[]' */
+  height: 6rem; /* 56px */
+
+  /* This is the equivalent of Tailwind's 'w-auto' */
+  width: auto;
+
+  /* This is the equivalent of Tailwind's 'ml-auto' */
+  margin-left: auto;
+}
+/* mabook-web-Goo/public/style1.css */
+
+.custom-nav {
+    background-color: #173F25;
+    color: white;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    font-family: 'Inter Light', serif;
+    padding: 0 3rem;
+    /* --- Add these properties --- */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .custom-nav {
+        padding: 0 1.5rem;
+    }
+}
+
+/* --- ADDED FOR NEW MOBILE NAVIGATION --- */
+
+/* Base style for all mobile navigation links */
+.mobile-nav-link,
+.mobile-nav-link-highlight {
+    font-family: 'Playfair Display', serif; /* Uses your site's elegant serif font */
+    font-size: 2.5rem; /* Large, impressive text size */
+    text-align: left;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid rgba(23, 63, 37, 0.15); /* Subtle separator line in your theme color */
+    text-decoration: none;
+    color: #173F25;
+    transition: background-color 0.3s;
+}
+
+/* A subtle hover effect for standard links */
+.mobile-nav-link:hover {
+    background-color: rgba(23, 63, 37, 0.05);
+}
+
+/* The special style for the highlighted "Feedback" link */
+.mobile-nav-link-highlight {
+    background-color: #173F25;
+    color: #FDF9F6;
+    border-bottom: 2px solid #173F25;
+}
+
+.mobile-nav-link-highlight:hover {
+    opacity: 0.9;
+}
+
+/* This removes the separator line from the very last link */
+#mobile-menu > div > a:last-child {
+    border-bottom: none;
+}
+
+/* Makes the font slightly smaller on very narrow phone screens */
+@media (max-width: 380px) {
+    .mobile-nav-link,
+    .mobile-nav-link-highlight {
+        font-size: 2rem;
+    }
+}
+/* Custom logo shadow for the mobile menu */
+.custom-logo-shadow {
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.2)); /* A subtle, elegant shadow */
+}

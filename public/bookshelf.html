@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf - MaBook</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Inter:300&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="footer-style.css">
+    <link rel="stylesheet" href="bookshelf-style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <div class="content-wrapper">
+        <div class="bookshelf-page-layout">
+
+            <div class="genre-toggle-container">
+                <button class="genre-toggle-button" id="genre-toggle-button">
+                    <svg class="toggle-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="genre-tags-container" id="genre-tags-container">
+                </div>
+
+            <main id="bookshelf-main-content">
+                <section id="habits-shelf" class="bookshelf-section home-bookshelf-section" data-genre="Habits"><div class="category"><h3>Habits</h3><p>Books on routines that shape success, growth, and everyday life.</p></div><div class="bookshelf-controls-wrapper"><button class="scroll-btn" aria-label="Scroll left">&#10094;</button><div class="bookshelf-container"><div class="bookshelf"></div></div><button class="scroll-btn" aria-label="Scroll right">&#10095;</button></div></section>
+                <section id="finance-shelf" class="bookshelf-section home-bookshelf-section" data-genre="Finance"><div class="category"><h3>Finance</h3><p>Books where money drives ambition, power, and life’s big gambles.</p></div><div class="bookshelf-controls-wrapper"><button class="scroll-btn" aria-label="Scroll left">&#10094;</button><div class="bookshelf-container"><div class="bookshelf"></div></div><button class="scroll-btn" aria-label="Scroll right">&#10095;</button></div></section>
+                <section id="mental-health-shelf" class="bookshelf-section home-bookshelf-section" data-genre="Mental Health"><div class="category"><h3>Mental Health</h3><p>Books exploring minds, healing, resilience, and inner journeys.</p></div><div class="bookshelf-controls-wrapper"><button class="scroll-btn" aria-label="Scroll left">&#10094;</button><div class="bookshelf-container"><div class="bookshelf"></div></div><button class="scroll-btn" aria-label="Scroll right">&#10095;</button></div></section>
+                <section id="leadership-shelf" class="bookshelf-section home-bookshelf-section" data-genre="Leadership"><div class="category"><h3>Leadership</h3><p>Guides to inspire, manage, and lead with impact.</p></div><div class="bookshelf-controls-wrapper"><button class="scroll-btn" aria-label="Scroll left">&#10094;</button><div class="bookshelf-container"><div class="bookshelf"></div></div><button class="scroll-btn" aria-label="Scroll right">&#10095;</button></div></section>
+                <section id="motivational-shelf" class="bookshelf-section home-bookshelf-section" data-genre="Motivational"><div class="category"><h3>Motivational</h3><p>Stories and strategies to unlock your full potential.</p></div><div class="bookshelf-controls-wrapper"><button class="scroll-btn" aria-label="Scroll left">&#10094;</button><div class="bookshelf-container"><div class="bookshelf"></div></div><button class="scroll-btn" aria-label="Scroll right">&#10095;</button></div></section>
+                <section id="physical-health-shelf" class="bookshelf-section home-bookshelf-section" data-genre="Physical Health"><div class="category"><h3>Physical Health</h3><p>Insights on wellness, fitness, and living a healthier life.</p></div><div class="bookshelf-controls-wrapper"><button class="scroll-btn" aria-label="Scroll left">&#10094;</button><div class="bookshelf-container"><div class="bookshelf"></div></div><button class="scroll-btn" aria-label="Scroll right">&#10095;</button></div></section>
+                <section id="time-management-shelf" class="bookshelf-section home-bookshelf-section" data-genre="Time Management"><div class="category"><h3>Time Management</h3><p>Techniques to boost productivity and master your schedule.</p></div><div class="bookshelf-controls-wrapper"><button class="scroll-btn" aria-label="Scroll left">&#10094;</button><div class="bookshelf-container"><div class="bookshelf"></div></div><button class="scroll-btn" aria-label="Scroll right">&#10095;</button></div></section>
+                <section id="communication-shelf" class="bookshelf-section home-bookshelf-section" data-genre="Communication"><div class="category"><h3>Communication</h3><p>Skills for clearer, more effective, and persuasive interaction.</p></div><div class="bookshelf-controls-wrapper"><button class="scroll-btn" aria-label="Scroll left">&#10094;</button><div class="bookshelf-container"><div class="bookshelf"></div></div><button class="scroll-btn" aria-label="Scroll right">&#10095;</button></div></section>
+                <section id="self-discovery-shelf" class="bookshelf-section home-bookshelf-section" data-genre="Self-Discovery"><div class="category"><h3>Self-Discovery</h3><p>Journeys into understanding oneself and finding purpose.</p></div><div class="bookshelf-controls-wrapper"><button class="scroll-btn" aria-label="Scroll left">&#10094;</button><div class="bookshelf-container"><div class="bookshelf"></div></div><button class="scroll-btn" aria-label="Scroll right">&#10095;</button></div></section>
+                <section id="decision-making-shelf" class="bookshelf-section home-bookshelf-section" data-genre="Decision making"><div class="category"><h3>Decision making</h3><p>Frameworks for making smarter, more confident choices.</p></div><div class="bookshelf-controls-wrapper"><button class="scroll-btn" aria-label="Scroll left">&#10094;</button><div class="bookshelf-container"><div class="bookshelf"></div></div><button class="scroll-btn" aria-label="Scroll right">&#10095;</button></div></section>
+                <section id="creativity-shelf" class="bookshelf-section home-bookshelf-section" data-genre="Creativity"><div class="category"><h3>Creativity</h3><p>Unlocking new ideas and fostering innovative thinking.</p></div><div class="bookshelf-controls-wrapper"><button class="scroll-btn" aria-label="Scroll left">&#10094;</button><div class="bookshelf-container"><div class="bookshelf"></div></div><button class="scroll-btn" aria-label="Scroll right">&#10095;</button></div></section>
+                <section id="cognitive-intelligence-shelf" class="bookshelf-section home-bookshelf-section" data-genre="Cognitive intelligence"><div class="category"><h3>Cognitive intelligence</h3><p>Exploring the science of thought, learning, and the mind.</p></div><div class="bookshelf-controls-wrapper"><button class="scroll-btn" aria-label="Scroll left">&#10094;</button><div class="bookshelf-container"><div class="bookshelf"></div></div><button class="scroll-btn" aria-label="Scroll right">&#10095;</button></div></section>
+                <section id="behaviour-shelf" class="bookshelf-section home-bookshelf-section" data-genre="Behaviour"><div class="category"><h3>Behaviour</h3><p>Understanding the psychology behind why we do what we do.</p></div><div class="bookshelf-controls-wrapper"><button class="scroll-btn" aria-label="Scroll left">&#10094;</button><div class="bookshelf-container"><div class="bookshelf"></div></div><button class="scroll-btn" aria-label="Scroll right">&#10095;</button></div></section>
+                <section id="emotional-intelligence-shelf" class="bookshelf-section home-bookshelf-section" data-genre="Emotional Intelligence"><div class="category"><h3>Emotional Intelligence</h3><p>Mastering emotions for better relationships and success.</p></div><div class="bookshelf-controls-wrapper"><button class="scroll-btn" aria-label="Scroll left">&#10094;</button><div class="bookshelf-container"><div class="bookshelf"></div></div><button class="scroll-btn" aria-label="Scroll right">&#10095;</button></div></section>
+                <section id="innovation-shelf" class="bookshelf-section home-bookshelf-section" data-genre="Innovation"><div class="category"><h3>Innovation</h3><p>Blueprints for creating and implementing groundbreaking ideas.</p></div><div class="bookshelf-controls-wrapper"><button class="scroll-btn" aria-label="Scroll left">&#10094;</button><div class="bookshelf-container"><div class="bookshelf"></div></div><button class="scroll-btn" aria-label="Scroll right">&#10095;</button></div></section>
+                <section id="philosophy-shelf" class="bookshelf-section home-bookshelf-section" data-genre="Philosophy"><div class="category"><h3>Philosophy</h3><p>Timeless wisdom for contemplating life's biggest questions.</p></div><div class="bookshelf-controls-wrapper"><button class="scroll-btn" aria-label="Scroll left">&#10094;</button><div class="bookshelf-container"><div class="bookshelf"></div></div><button class="scroll-btn" aria-label="Scroll right">&#10095;</button></div></section>
+                <section id="entrepreneurship-shelf" class="bookshelf-section home-bookshelf-section" data-genre="Entrepreneurship"><div class="category"><h3>Entrepreneurship</h3><p>Playbooks for building, launching, and growing a business.</p></div><div class="bookshelf-controls-wrapper"><button class="scroll-btn" aria-label="Scroll left">&#10094;</button><div class="bookshelf-container"><div class="bookshelf"></div></div><button class="scroll-btn" aria-label="Scroll right">&#10095;</button></div></section>
+            </main>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script src="componentLoader.js"></script> 
+    <script type="module">
+        import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+        import { initializeBookshelf } from './bookshelf.js';
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('nav.html', 'navbar-container', initializeNavbar);
+            loadComponent('footer.html', 'footer-container', () => {
+                const yearSpan = document.getElementById('footer-year');
+                if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+            });
+
+            const allBookshelfSections = document.querySelectorAll('.bookshelf-section');
+            const genreToggleButton = document.getElementById('genre-toggle-button');
+            const tagsContainer = document.getElementById('genre-tags-container');
+
+            // --- Generate Genre Tags, including "All" ---
+            const genres = Array.from(allBookshelfSections).map(section => section.dataset.genre);
+            let tagsHTML = `<button class="genre-tag active" data-genre="all">All</button>`;
+            tagsHTML += genres.map(genre => `<button class="genre-tag" data-genre="${genre}">${genre}</button>`).join('');
+            tagsContainer.innerHTML = tagsHTML;
+            const allTags = tagsContainer.querySelectorAll('.genre-tag');
+
+            // --- Logic for Toggling Genre Tags ---
+            genreToggleButton.addEventListener('click', () => {
+                tagsContainer.classList.toggle('visible');
+                genreToggleButton.classList.toggle('active');
+            });
+            
+            // --- Logic for Filtering by Genre ---
+            tagsContainer.addEventListener('click', (event) => {
+                if (event.target.classList.contains('genre-tag')) {
+                    const clickedTag = event.target;
+                    const selectedGenre = clickedTag.dataset.genre;
+                    
+                    allTags.forEach(tag => tag.classList.remove('active'));
+                    clickedTag.classList.add('active');
+
+                    allBookshelfSections.forEach(section => {
+                        if (selectedGenre === 'all' || section.dataset.genre === selectedGenre) {
+                            section.style.display = 'block';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+
+                    document.getElementById('bookshelf-main-content').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+
+            // --- BOOKSHELF INITIALIZATION (with real data) ---
+            const supabaseUrl = 'https://gyytvnpsjazrkcfxolxg.supabase.co';
+            const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd5eXR2bnBzamF6cmtjZnhvbHhnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQyODE4MjMsImV4cCI6MjA2OTg1NzgyM30.b58KbtxvgwzrRw_q-nSDE44a4fr-Ssxhx0MRDO9t3es';
+            const supabase = createClient(supabaseUrl, supabaseKey);
+
+            allBookshelfSections.forEach(section => {
+                const genre = section.dataset.genre;
+                initializeBookshelf(section.id, genre, supabase);
+            });
+        });
+    </script>
+</body>
+</html>

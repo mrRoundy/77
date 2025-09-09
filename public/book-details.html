@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details - MaBook</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="book-details.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-[#FDF9F6]">
+
+    <div id="navbar-container"></div>
+
+    <main class="container">
+        <div id="loading-indicator" class="loading-container">
+            <div class="loader"></div>
+            <p>Loading book details...</p>
+        </div>
+
+        <div id="book-content" class="book-details-layout hidden">
+            <div class="book-cover-container">
+                <img id="book-cover" src="" alt="Book Cover">
+            </div>
+            <div class="book-info-container">
+                <h1 id="book-title" class="book-title"></h1>
+                <h2 id="book-author" class="book-author"></h2>
+
+                <div class="book-meta">
+                    <p><strong>Genre:</strong> <span id="book-genres"></span></p>
+                    <p><strong>Sub-genre:</strong> <span id="book-subgenres"></span></p>
+                </div>
+                
+                <h3 class="synopsis-title">Synopsis</h3>
+                <p id="book-synopsis" class="book-synopsis"></p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="componentLoader.js"></script>
+    <script type="module" src="book-details.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load the navbar and then call initializeNavbar as a callback.
+            // This ensures the navbar HTML exists before we try to add logic to it.
+            loadComponent('nav.html', 'navbar-container', initializeNavbar);
+            
+            // Load the footer component.
+            loadComponent('footer.html', 'footer-container', () => {
+                const yearSpan = document.getElementById('footer-year');
+                if (yearSpan) {
+                    yearSpan.textContent = new Date().getFullYear();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

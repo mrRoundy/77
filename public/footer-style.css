@@ -1,0 +1,54 @@
+/* --- Footer-Only Styles --- */
+.site-footer {
+    background-color: #173F25; /* Same dark green as the nav bar */
+    color: white;
+    padding: 1.5rem 1rem; /* Increased vertical padding slightly */
+    font-family: 'Inter Light', serif; /* Uses the stylish serif font */
+}
+
+.footer-content {
+    max-width: 1500px;
+    margin: 0 auto; /* Centers the content */
+    display: flex;
+    flex-direction: row; /* Lays out items horizontally on desktop */
+    justify-content: space-between; /* Pushes items to opposite ends */
+    align-items: center; /* Vertically centers the items */
+    gap: 1.5rem; /* Added slightly more gap */
+}
+
+.footer-brand {
+    font-family: 'Inter Light', serif; /* Uses the stylish serif font */
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-align: left; /* Aligns the brand text to the left */
+}
+
+.footer-info {
+    font-size: 0.875rem;
+    color: #E5E7EB; /* A slightly softer white for the text */
+}
+
+.footer-info a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-info a:hover {
+    color: white; /* Makes links brighter on hover */
+}
+
+.footer-info .separator {
+    margin: 0 0.5rem; /* Adds space around the "|" separators */
+}
+
+/* --- NEW: Responsive Styles for Mobile --- */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stacks the items vertically */
+        gap: 0.75rem; /* Reduces the gap for a tighter look */
+    }
+
+    .footer-info {
+        text-align: center; /* Centers the text within each line */
+    }
+}
