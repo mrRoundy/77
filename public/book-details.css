@@ -4,8 +4,6 @@
     padding: 2rem;
 }
 
-
-
 /* Loading Indicator Styles */
 .loading-container {
     text-align: center;
@@ -30,7 +28,6 @@
 }
 
 /* Book Layout Styles */
-/* Book Layout Styles */
 .book-details-layout {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -39,12 +36,12 @@
     padding: 3rem;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
-    /* Add this line to align items to the top */
+    /* This aligns the items to the top of their grid cells */
     align-items: start; 
 }
 
-/* This is the key change to make the image "sticky" */
 .book-cover-container {
+    /* This makes the image container stick to the top as you scroll */
     position: sticky;
     top: 7rem; /* Adjust this value based on your navbar height */
 }
@@ -99,14 +96,29 @@
     color: #333;
 }
 
+/* --- UPDATED: Responsive Styles for Mobile --- */
 @media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        margin-top: 1.5rem;
+    }
+
     .book-details-layout {
         grid-template-columns: 1fr;
         padding: 1.5rem;
         gap: 2rem;
     }
+
     .book-cover-container {
+        position: static; 
         text-align: center;
     }
-}
+    
+    .book-title {
+        font-size: 2rem;
+    }
 
+    .book-author {
+        font-size: 1.1rem;
+    }
+}
