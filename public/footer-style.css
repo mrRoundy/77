@@ -1,31 +1,31 @@
 /* --- Footer-Only Styles --- */
 .site-footer {
-    background-color: #173F25; /* Same dark green as the nav bar */
+    background-color: #173F25;
     color: white;
-    padding: 1.5rem 1rem; /* Increased vertical padding slightly */
-    font-family: 'Inter Light', serif; /* Uses the stylish serif font */
+    padding: 1.5rem 1rem;
+    font-family: 'Inter Light', serif;
 }
 
 .footer-content {
     max-width: 1500px;
-    margin: 0 auto; /* Centers the content */
+    margin: 0 auto;
     display: flex;
-    flex-direction: row; /* Lays out items horizontally on desktop */
-    justify-content: space-between; /* Pushes items to opposite ends */
-    align-items: center; /* Vertically centers the items */
-    gap: 1.5rem; /* Added slightly more gap */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 .footer-brand {
-    font-family: 'Inter Light', serif; /* Uses the stylish serif font */
+    font-family: 'Inter Light', serif;
     font-size: 1.75rem;
     font-weight: bold;
-    text-align: left; /* Aligns the brand text to the left */
+    text-align: left;
 }
 
 .footer-info {
     font-size: 0.875rem;
-    color: #E5E7EB; /* A slightly softer white for the text */
+    color: #E5E7EB;
 }
 
 .footer-info a {
@@ -34,21 +34,23 @@
 }
 
 .footer-info a:hover {
-    color: white; /* Makes links brighter on hover */
+    color: white;
 }
 
 .footer-info .separator {
-    margin: 0 0.5rem; /* Adds space around the "|" separators */
+    margin: 0 0.5rem;
 }
 
 /* --- NEW: Responsive Styles for Mobile --- */
 @media (max-width: 768px) {
     .footer-content {
-        flex-direction: column; /* Stacks the items vertically */
-        gap: 0.75rem; /* Reduces the gap for a tighter look */
+        /* Stack the items vertically */
+        flex-direction: column;
+        gap: 0.75rem;
     }
 
     .footer-info {
-        text-align: center; /* Centers the text within each line */
+        /* Center the text for a clean look */
+        text-align: center;
     }
 }

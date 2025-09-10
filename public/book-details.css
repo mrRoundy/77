@@ -36,14 +36,12 @@
     padding: 3rem;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
-    /* This aligns the items to the top of their grid cells */
     align-items: start; 
 }
 
 .book-cover-container {
-    /* This makes the image container stick to the top as you scroll */
     position: sticky;
-    top: 7rem; /* Adjust this value based on your navbar height */
+    top: 7rem;
 }
 
 
@@ -104,17 +102,20 @@
     }
 
     .book-details-layout {
+        /* Switch to a single-column layout */
         grid-template-columns: 1fr;
         padding: 1.5rem;
         gap: 2rem;
     }
 
     .book-cover-container {
+        /* Disable the sticky positioning on mobile */
         position: static; 
         text-align: center;
     }
     
     .book-title {
+        /* Reduce title size for smaller screens */
         font-size: 2rem;
     }
 
