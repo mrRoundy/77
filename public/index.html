@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MaBook - Book Recommendations</title>
 
+    <link rel="icon" type="image/png" href="image/websitelogo.png">
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet" />
@@ -13,7 +14,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="footer-style.css">
-    <link rel="icon" type="image/png" href="image/websitelogo.png?v=3" sizes="16x16">
+
     <script>
         tailwind.config = {
             theme: {
@@ -54,29 +55,37 @@
             blink .75s step-end infinite;
         }
     
-    .search-option-btn {
-        padding: 6px 16px;
-        border-radius: 9999px; /* This makes it pill-shaped */
-        font-size: 14px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
-        border: 1px solid #d1d5db; /* A light gray border */
-        color: #173F25; /* Your classic-green color */
-        background-color: transparent;
-    }
-    .search-option-btn.active {
-        background-color: #173F25; /* The selected button is green */
-        color: #ffffff; /* With white text */
-        border-color: #173F25;
-    }
-    .search-option-btn:not(.active):hover {
-        border-color: #173F25; /* Border turns green on hover */
-    }
-</style>
+        .search-option-btn {
+            padding: 6px 16px;
+            border-radius: 9999px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            border: 1px solid #d1d5db;
+            color: #173F25;
+            background-color: transparent;
+        }
+        .search-option-btn.active {
+            background-color: #173F25;
+            color: #ffffff;
+            border-color: #173F25;
+        }
+        .search-option-btn:not(.active):hover {
+            border-color: #173F25;
+        }
+
+        /* --- Fixes for Prompt Box Outline and Placeholder --- */
+        #promptInput:focus {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+        #promptInput::placeholder {
+            color: black !important;
+            opacity: 1; /* Ensures full color visibility in all browsers */
+        }
+    </style>
     
-    
-    </head>
 </head>
 <body>
     <div id="navbar-container"></div>
@@ -101,41 +110,42 @@
 
         <main>
             <section class="search-section">
-    <div class="text-center text-classic-green mb-10">
-        <p id="animated-quote" class="font-sans text-[25.7px] mb-4">
-            “A Book’s True Worth is Hidden in its Wisdom, <strong class="font-bold">NOT</strong> its Cover”
-        </p>
-        <h2 class="font-serif text-[42.6px] font-bold uppercase tracking-widest">
-            Begin by Asking...
-        </h2>
-    </div>
-    <div class="max-w-4xl mx-auto w-full">
-        <form id="home-prompt-form">
-            <div class="w-full bg-white border border-classic-green/30 rounded-2xl p-4 flex flex-col justify-between shadow-sm">
-                <textarea
-                    class="search-input font-sans w-full flex-grow bg-transparent text-classic-green placeholder-neutral-500 text-base leading-relaxed focus:outline-none"
-                    id="promptInput"
-                    name="query"
-                    placeholder="Ask me anything about books you'd like to read..."
-                    rows="1"></textarea>
-                <div id="prompt-controls" class="flex items-center justify-between mt-3">
-                    <div class="flex items-center space-x-2">
-                        <button type="button" id="byHighlightsBtn" class="search-option-btn font-sans active">By Highlights</button>
-                        <button type="button" id="bySynopsisBtn" class="search-option-btn font-sans">By Synopsis</button>
-                    </div>
-                    <button
-                        type="submit"
-                        class="send-btn flex-shrink-0 w-10 h-10 bg-neutral-100 text-neutral-400 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-opacity-90 disabled:bg-neutral-100 disabled:text-neutral-300 disabled:cursor-not-allowed"
-                        id="sendBtn" disabled>
-                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                    </button>
+                <div class="text-center text-classic-green mb-10">
+                    <p id="animated-quote" class="font-sans text-[25.7px] mb-4">
+                        “A Book’s True Worth is Hidden in its Wisdom, <strong class="font-bold">NOT</strong> its Cover”
+                    </p>
+                    <h2 class="font-serif text-[42.6px] font-bold uppercase tracking-widest">
+                        Begin by Asking...
+                    </h2>
                 </div>
-            </div>
-        </form>
-    </div>
-</section>
+                <div class="max-w-4xl mx-auto w-full">
+                    <form id="home-prompt-form">
+                        <div class="w-full bg-white border border-classic-green/30 rounded-2xl p-4 flex flex-col justify-between shadow-sm">
+                            <input
+                                type="text"
+                                class="search-input font-sans w-full flex-grow bg-transparent text-classic-green placeholder-neutral-500 text-base leading-relaxed focus:outline-none"
+                                id="promptInput"
+                                name="query"
+                                placeholder="Ask me anything about books you'd like to read..."
+                            />
+                            <div id="prompt-controls" class="flex items-center justify-between mt-3">
+                                <div class="flex items-center space-x-2">
+                                    <button type="button" id="byHighlightsBtn" class="search-option-btn font-sans active">By Highlights</button>
+                                    <button type="button" id="bySynopsisBtn" class="search-option-btn font-sans">By Synopsis</button>
+                                </div>
+                                <button
+                                    type="submit"
+                                    class="send-btn flex-shrink-0 w-10 h-10 bg-neutral-100 text-neutral-400 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-opacity-90 disabled:bg-neutral-100 disabled:text-neutral-300 disabled:cursor-not-allowed"
+                                    id="sendBtn" disabled>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
 
            <section class="recommendations">
                 <div class="recommendation-header">
@@ -197,9 +207,7 @@
 
     <script type="module" src="script.js"></script>
     <script src="componentLoader.js"></script>
-    <script type="module" src="script.js"></script>
-<script src="componentLoader.js"></script>
-<script src="home-prompt.js"></script>
+    <script src="home-prompt.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', () => {
         // This loads the nav.html into the navbar-container div
