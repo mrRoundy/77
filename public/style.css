@@ -19,6 +19,13 @@ body {
     min-height: 100vh;
 }
 
+/* --- ADD THIS RULE --- */
+/* This makes the main content area expand to fill empty space */
+.content-wrapper {
+    flex-grow: 1;
+}
+/* --- END OF ADDED RULE --- */
+
 .page-container {
     max-width: 1440px;
     margin: 0 auto;
