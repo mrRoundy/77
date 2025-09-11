@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="footer-style.css">
+    <link rel="stylesheet" href="index-animation.css">
 
     <script>
         tailwind.config = {
@@ -36,23 +37,8 @@
     </script>
 
     <style>
-        @keyframes typing {
-          from { width: 0; }
-          to { width: 100%; }
-        }
-
-        @keyframes blink {
-          50% { border-color: transparent; }
-        }
-
-        .typing-animation {
-          display: inline-block;
-          overflow: hidden;
-          white-space: nowrap;
-          border-right: 4px solid #173F25;
-          animation:
-            typing 3.5s steps(59, end) forwards,
-            blink .75s step-end infinite;
+        .responsive-quote {
+            font-size: clamp(1.1rem, 2.5vw, 1.6rem);
         }
     
         .search-option-btn {
@@ -75,14 +61,13 @@
             border-color: #173F25;
         }
 
-        /* --- Fixes for Prompt Box Outline and Placeholder --- */
         #promptInput:focus {
             outline: none !important;
             box-shadow: none !important;
         }
         #promptInput::placeholder {
             color: black !important;
-            opacity: 1; /* Ensures full color visibility in all browsers */
+            opacity: 1; 
         }
     </style>
     
@@ -111,7 +96,7 @@
         <main>
             <section class="search-section">
                 <div class="text-center text-classic-green mb-10">
-                    <p id="animated-quote" class="font-sans text-[25.7px] mb-4">
+                    <p id="animated-quote" class="font-sans responsive-quote mb-4">
                         “A Book’s True Worth is Hidden in its Wisdom, <strong class="font-bold">NOT</strong> its Cover”
                     </p>
                     <h2 class="font-serif text-[42.6px] font-bold uppercase tracking-widest">
@@ -208,38 +193,6 @@
     <script type="module" src="script.js"></script>
     <script src="componentLoader.js"></script>
     <script src="home-prompt.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // This loads the nav.html into the navbar-container div
-        loadComponent('nav.html', 'navbar-container', initializeNavbar);
-
-        // This loads the footer.html into the footer-container div
-        loadComponent('footer.html', 'footer-container', () => {
-            const yearSpan = document.getElementById('footer-year');
-            if (yearSpan) {
-                yearSpan.textContent = new Date().getFullYear();
-            }
-        });
-
-        // This is the new logic for the typing animation
-        const quoteElement = document.getElementById('animated-quote');
-        if (quoteElement) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        quoteElement.classList.add('typing-animation');
-                        quoteElement.addEventListener('animationend', (event) => {
-                            if (event.animationName === 'typing') {
-                                quoteElement.style.borderRight = 'none';
-                            }
-                        });
-                        observer.unobserve(quoteElement);
-                    }
-                });
-            }, { threshold: 0.8 }); 
-            observer.observe(quoteElement);
-        }
-    });
-</script>
+    <script src="index-loader.js"></script>
 </body>
 </html>
